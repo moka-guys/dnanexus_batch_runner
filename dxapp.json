@@ -1,0 +1,69 @@
+{
+  "name": "batch_runner_v2.2",
+  "title": "Batch Workflow Runner v2.2",
+  "dxapi": "1.0.0",
+  "inputSpec": [
+    {
+      "name": "workflow",
+      "label": "Workflow Name",
+      "class": "string",
+      "optional": false
+    },
+    {
+      "name": "input_pattern",
+      "label": "Input Pattern",
+      "class": "string",
+      "optional": false,
+      "default": "*fastq*"
+    },
+    {
+      "name": "input_identifier",
+      "label": "Input Identifier",
+      "class": "string",
+      "optional": false,
+      "default": "R1"
+    },
+    {
+      "name": "replace_identifier",
+      "label": "Replace Identifier With",
+      "class": "string",
+      "optional": true,
+      "default": "R2"
+    },
+    {
+      "name": "input_class",
+      "label": "Input Class",
+      "class": "string",
+      "optional": false,
+      "default": "file"
+    },
+    {
+      "name": "token",
+      "label": "API token",
+      "class": "string",
+      "optional": true,
+      "default": ""
+    },
+    {
+      "name": "paired",
+      "label": "Paired Inputs",
+      "class": "boolean",
+      "optional": true,
+      "default": true
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "log",
+      "class": "file",
+      "optional": true
+    }
+  ],
+  "runSpec": {
+    "file": "src/code.sh",
+    "interpreter": "bash"
+  },
+  "access": {
+    "allProjects": "CONTRIBUTE"
+  }
+}

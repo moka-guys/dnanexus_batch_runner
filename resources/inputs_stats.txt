@@ -1,0 +1,2 @@
+reads_fastqgz
+reads2_fastqgz
